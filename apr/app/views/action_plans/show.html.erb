@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Unit:</strong>
+  <%= @action_plan.unit_id %>
+</p>
+
+<p>
+  <strong>Date of site visit:</strong>
+  <%= @action_plan.date_of_site_visit %>
+</p>
+
+<!--<p>
+  <strong>Submission or update:</strong>
+  <%# @action_plan.submission_or_update %>
+</p>
+
+<p>
+  <strong>Submission or update date:</strong>
+  <%# @action_plan.submission_or_update_date %>
+</p>-->
+
+<p>
+  <strong>Submitter name:</strong>
+  <%= @action_plan.submitter_first_name %>, <%= @action_plan.submitter_last_name %>
+</p>
+
+<p>
+  <strong>Submitter title:</strong>
+  <%= @action_plan.submitter_title %>
+</p>
+
+<%= link_to 'Edit', edit_action_plan_path(@action_plan) %> |
+<%= link_to 'Back', action_plans_path %>
+

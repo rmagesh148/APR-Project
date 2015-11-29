@@ -1,0 +1,1 @@
+json.extract! @criterion_sub_detail, :id, :criterion_detail_id, :action_item, :associated_tasks, :individuals_resp, :other_res_items, :cost_amt, :source_of_funding, :proj_start_date, :target_comp_date, :current_status, :created_at, :updated_at

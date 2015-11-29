@@ -1,0 +1,27 @@
+<h1>Listing Criterion Files</h1>
+
+<table>
+  <thead>
+    <tr>
+      <!--<th>Criterion detail</th>-->
+      <th>Name</th>
+      <th>Download Link</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @criterion_files.each do |criterion_file| %>
+      <tr>
+        <!--<td><%# criterion_file.criterion_detail %></td>-->
+        <td><%= criterion_file.name %></td>
+        <!--<td><%# criterion_file.attachment %></td>-->
+        <td><%= link_to 'Download', criterion_file.attachment_url, :target => "_blank" %></td>
+        <!--<td><%# link_to 'Edit', edit_criterion_file_path(criterion_file) %></td>-->
+        <td><%= link_to 'Delete', criterion_file, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

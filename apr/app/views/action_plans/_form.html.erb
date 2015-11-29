@@ -1,0 +1,53 @@
+<%= form_for(@action_plan) do |f| %>
+    <% if @action_plan.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@action_plan.errors.count, "error") %> prohibited this action_plan from being saved:</h2>
+
+          <ul>
+            <% @action_plan.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <table>
+      <tr>
+        <th><%= f.label :unit %><br></th>
+        <td><%= f.collection_select :unit_id, Unit.all, :id, :unit, prompt: true %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :date_of_site_visit %><br></th>
+        <td><%= f.date_select :date_of_site_visit %></td>
+      </tr>
+      <!--<tr>
+        <th><%# f.label :submission_or_update %><br/>
+          <%# f.label :submission_or_update, "Submission", :value => "submission" %></th>
+        <td><%# f.radio_button :submission_or_update, "Submission", {:checked => true} %></td>
+      </tr>
+      <tr>
+        <th><%# f.label :submission_or_update, "Update", :value => "update" %></th>
+        <td><%# f.radio_button :submission_or_update, "Update" %></td>
+      </tr>
+      <tr>
+        <th><%# f.label :Date %><br></th>
+        <td><%# f.date_select :submission_or_update_date %></td>
+      </tr>-->
+      <tr>
+        <th><%= f.label :submitter_first_name %><br></th>
+        <td><%= f.text_field :submitter_first_name %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :submitter_last_name %><br></th>
+        <td><%= f.text_field :submitter_last_name %></td>
+      </tr>
+      <tr>
+        <th><%= f.label :submitter_title %><br></th>
+        <td><%= f.text_field :submitter_title %></td>
+      </tr>
+    </table>
+    <%= f.hidden_field :user_id, :value => User.find_by_username(session[:cas_user].to_s).id %>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+<% end %>

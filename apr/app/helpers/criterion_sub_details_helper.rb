@@ -1,0 +1,2 @@
+module CriterionSubDetailsHelper
+end

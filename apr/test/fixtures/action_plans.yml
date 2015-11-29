@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unit: MyString
+  date_of_site_visit: 2015-11-10
+  submission_or_update: MyString
+  submission_or_update_date: 2015-11-10
+  submitter_name: MyString
+  submitter_title: MyString
+
+two:
+  unit: MyString
+  date_of_site_visit: 2015-11-10
+  submission_or_update: MyString
+  submission_or_update_date: 2015-11-10
+  submitter_name: MyString
+  submitter_title: MyString

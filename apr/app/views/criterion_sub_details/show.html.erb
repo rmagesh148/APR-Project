@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Criterion detail:</strong>
+  <%= @criterion_sub_detail.criterion_detail %>
+</p>
+
+<p>
+  <strong>Action item:</strong>
+  <%= @criterion_sub_detail.action_item %>
+</p>
+
+<p>
+  <strong>Associated tasks:</strong>
+  <%= @criterion_sub_detail.associated_tasks %>
+</p>
+
+<p>
+  <strong>Individuals resp:</strong>
+  <%= @criterion_sub_detail.individuals_resp %>
+</p>
+
+<p>
+  <strong>Other res items:</strong>
+  <%= @criterion_sub_detail.other_res_items %>
+</p>
+
+<p>
+  <strong>Cost amt:</strong>
+  <%= @criterion_sub_detail.cost_amt %>
+</p>
+
+<p>
+  <strong>Source of funding:</strong>
+  <%= @criterion_sub_detail.source_of_funding %>
+</p>
+
+<p>
+  <strong>Proj start date:</strong>
+  <%= @criterion_sub_detail.proj_start_date %>
+</p>
+
+<p>
+  <strong>Target comp date:</strong>
+  <%= @criterion_sub_detail.target_comp_date %>
+</p>
+
+<p>
+  <strong>Current status:</strong>
+  <%= @criterion_sub_detail.current_status %>
+</p>
+
+<%= link_to 'Edit', edit_criterion_sub_detail_path(@criterion_sub_detail) %> |
+<%= link_to 'Back', criterion_sub_details_path %>

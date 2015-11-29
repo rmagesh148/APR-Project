@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  action_plan_id: 
+  criterion_id: 
+  cd_date1: 2015-11-11
+  cd_date2: 2015-11-11
+  cd_field1: MyString
+  cd_field2: MyString
+  comments: MyString
+
+two:
+  action_plan_id: 
+  criterion_id: 
+  cd_date1: 2015-11-11
+  cd_date2: 2015-11-11
+  cd_field1: MyString
+  cd_field2: MyString
+  comments: MyString

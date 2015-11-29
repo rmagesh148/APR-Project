@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+<h1>Listing Users</h1>
+<div>
+
+<table class= "table table-striped">
+  
+  <thead>
+    <tr>
+      <th><center>First Name</center></th>
+      <th><center>Last Name</center></th>
+      <th><center>Username</center></th>
+      <th><center>Email</center></th>
+      <th><center>Role</center></th>
+      <th><center>Action</center></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><center><%= user.first_name %></center></td>
+        <td><center><%= user.last_name %></center></td>
+        <td><center><%= user.username %></center></td>
+        <td><center><%= user.email %></center></td>
+        <td><center><%= user.role %></center></td>
+        <td><center>
+        <div class="btn-group">
+          <%= link_to 'Show', user, class: "btn" %>
+        <%= link_to 'Edit', edit_user_path(user), class: "btn", style: 'color: purple;' %>
+      <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn", style: 'color: red;' %>
+      </center></td></div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path, class: "btn btn-primary"  %>

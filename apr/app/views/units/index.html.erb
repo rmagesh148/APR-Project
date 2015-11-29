@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+<h1>Listing Units</h1>
+<div>
+<table class= "table table-striped">
+  <thead>
+    <tr>
+      <th><center>Unit</center></th>
+      <th><center>College</center></th>
+      <th><center>Action</center></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @units.each do |unit| %>
+      <tr>
+        <td><center><%= unit.unit %></center></td>
+        <td><center><%= unit.college %></center></td>
+        <td><center>
+          <div class="btn-group">
+          <%= link_to 'Show', unit, class: "btn" %>
+        <%= link_to 'Edit', edit_unit_path(unit), class: "btn", style: 'color: purple;' %>
+        <%= link_to 'Destroy', unit, method: :delete,data: { confirm: 'Are you sure?' }, class: "btn", style: 'color: red;'%>
+      </center></td></div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Unit', new_unit_path, class: "btn btn-primary" %>
+</div>

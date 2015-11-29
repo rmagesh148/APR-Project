@@ -1,0 +1,6 @@
+sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) E_DRIVE /home/vamshi/host
+
+sudo mount -t vboxsf -o uid=$UID,gid=$(id -g) E_ECE-595-003_-_Web_Arch_and_Cloud_Computing /home/vamshi/host
+
+
+ECE-595-003_-_Web_Arch_and_Cloud_Computing

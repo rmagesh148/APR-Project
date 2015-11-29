@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Criterion number:</strong>
+  <%= @criterion.criterion_number %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @criterion.description %>
+</p>
+
+<p>
+  <strong>Field 1 Text:</strong>
+  <%= @criterion.field1 %>
+</p>
+
+<p>
+  <strong>Field 2 Text:</strong>
+  <%= @criterion.field2 %>
+</p>
+
+<%= link_to 'Edit', edit_criterion_path(@criterion) %> |
+<%= link_to 'Back', criterions_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Criterion Details</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Action plan</th>
+      <th>Criterion</th>
+      <th>Cd date1</th>
+      <th>Cd date2</th>
+      <th>Cd field1</th>
+      <th>Cd field2</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @criterion_details.each do |criterion_detail| %>
+      <tr>
+        <td><%= criterion_detail.action_plan %></td>
+        <td><%= criterion_detail.criterion %></td>
+        <td><%= criterion_detail.cd_date1 %></td>
+        <td><%= criterion_detail.cd_date2 %></td>
+        <td><%= criterion_detail.cd_field1 %></td>
+        <td><%= criterion_detail.cd_field2 %></td>
+        <td><%= criterion_detail.comments %></td>
+        <td><%= link_to 'Show', criterion_detail %></td>
+        <td><%= link_to 'Edit', edit_criterion_detail_path(criterion_detail) %></td>
+        <td><%= link_to 'Destroy', criterion_detail, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Criterion detail', new_criterion_detail_path %>

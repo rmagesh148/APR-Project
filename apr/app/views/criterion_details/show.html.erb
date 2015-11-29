@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Action plan:</strong>
+  <%= @criterion_detail.action_plan %>
+</p>
+
+<p>
+  <strong>Criterion:</strong>
+  <%= @criterion_detail.criterion %>
+</p>
+
+<p>
+  <strong>Cd date1:</strong>
+  <%= @criterion_detail.cd_date1 %>
+</p>
+
+<p>
+  <strong>Cd date2:</strong>
+  <%= @criterion_detail.cd_date2 %>
+</p>
+
+<p>
+  <strong>Cd field1:</strong>
+  <%= @criterion_detail.cd_field1 %>
+</p>
+
+<p>
+  <strong>Cd field2:</strong>
+  <%= @criterion_detail.cd_field2 %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @criterion_detail.comments %>
+</p>
+
+<%= link_to 'Edit', edit_criterion_detail_path(@criterion_detail) %> |
+<%= link_to 'Back', criterion_details_path %>
